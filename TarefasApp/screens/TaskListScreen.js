@@ -1,7 +1,9 @@
 // TaskListScreen.js
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
-import db from '../db';
+import openDB from "../db"
+const db = openDB()
+
 
 const TaskListScreen = () => {
   const [tasks, setTasks] = useState([]);

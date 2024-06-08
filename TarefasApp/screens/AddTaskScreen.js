@@ -1,7 +1,10 @@
 // AddTaskScreen.js
 import React, { useState } from 'react';
 import { View, TextInput, Button } from 'react-native';
-import db from '../db';
+
+import openDB from "../db"
+const db = openDB()
+
 
 const AddTaskScreen = () => {
   const [taskText, setTaskText] = useState('');
